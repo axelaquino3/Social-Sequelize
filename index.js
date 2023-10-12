@@ -12,8 +12,8 @@ Post.hasMany(Comment)
 Comment.belongsTo(Post)
 
 
-User.hasMany(Like, {through: "like-tag"})
-Like.hasMany(User, {through: "like-tag"})
+User.belongsToMany(Like, {through: "user-like"})
+Like.belongsToMany(User, {through: "user-like"})
 
 
 
