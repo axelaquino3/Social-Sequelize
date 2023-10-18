@@ -37,6 +37,7 @@ describe('Social Sequelzie Test', () => {
         await user.setProfile(p1)
         const userProfile = await user.getProfile()
         
+        console.log(JSON.stringify(user))
         expect(userProfile.bio).toBe("I love to travel")
     })
 
